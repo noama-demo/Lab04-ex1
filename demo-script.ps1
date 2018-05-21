@@ -1,4 +1,4 @@
-function Create-GreenMessage
+function Create-BlueMessage
 {
     param
     (
@@ -6,8 +6,8 @@ function Create-GreenMessage
         $Message
     )
 
-    Write-Host $Message -ForegroundColor Green
+    Write-Host $Message -ForegroundColor Blue
 }
 
-Create-GreenMessage -Message "My Message"
-Create-GreenMessage -Message "Master Message"
+Create-BlueMessage -Message "My Message"
+Create-BlueMessage -Message "Feature Message"
