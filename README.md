@@ -127,7 +127,7 @@ $ git rebase master
 
  - Use the following command to clone a repo and checkout the feature branch in a single step:
 ```
-$ git clone https://gitlab.com/git-getstarted/lab4.git --branch feature
+$ git clone https://gitlab.com/sela-git-workshop/lab4.git --branch feature
 ```
 
  - Move to the repository working area:
