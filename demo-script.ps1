@@ -9,5 +9,5 @@ function Create-BlueMessage
     Write-Host $Message -ForegroundColor Blue
 }
 
-Create-BlueMessage -Message "My Message"
-Create-BlueMessage -Message "Feature Message"
+Create-BlueMessage -Message "My feature Message"
+Create-BlueMessage -Message "Feature Message!"
