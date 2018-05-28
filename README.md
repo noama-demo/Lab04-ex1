@@ -127,12 +127,12 @@ $ git rebase master
 
  - Use the following command to clone a repo and checkout the feature branch in a single step:
 ```
-$ git clone https://gitlab.com/sela-git-workshop/lab4.git --branch feature
+$ git clone https://gitlab.com/sela-git-basic-workshop/lab-04.git --branch feature
 ```
 
  - Move to the repository working area:
 ```
-$ cd lab4
+$ cd lab-04
 ```
 
  - Inspect the repository history:
@@ -167,11 +167,7 @@ $ git merge feature
 
  - A conflict will occur, when you open the file you will see the following:
 ```
-    <<<<<<< HEAD
-    ï»¿function Create-GreenMessage
-    =======
-    ?ï»¿function Create-BlueMessage
-    >>>>>>> feature
+    function Create-BlueMessage
     {
         param
         (
@@ -179,18 +175,16 @@ $ git merge feature
             $Message
         )
 
-    <<<<<<< HEAD
-        Write-Host $Message -ForegroundColor Green
-    }
-
-    Create-GreenMessage -Message "My Message"
-    Create-GreenMessage -Message "Master Message"
-    =======
+    
         Write-Host $Message -ForegroundColor Blue
     }
 
-    Create-BlueMessage -Message "My Message"
-    Create-BlueMessage -Message "Feature Message"
+    <<<<<<< HEAD
+    Create-GreenMessage -Message "My master Message"
+    Create-GreenMessage -Message "Master Message!"
+    =======
+    Create-BlueMessage -Message "My feature Message"
+    Create-BlueMessage -Message "Feature Message!"
     >>>>>>> feature
 ```
 
@@ -204,12 +198,12 @@ $ git merge feature
             $Message
         )
 
-        Write-Host $Message -ForegroundColor Green
+        Write-Host $Message -ForegroundColor Blue
     }
     
-    Create-GreenMessage -Message "My Message"
-    Create-GreenMessage -Message "Master Message"
-    Create-GreenMessage -Message "Feature Message"
+    Create-BlueMessage -Message "My master Message"
+    Create-BlueMessage -Message "Master Message!"
+    Create-BlueMessage -Message "Feature Message!"
 ```
 
  - Add the changes to the index:
